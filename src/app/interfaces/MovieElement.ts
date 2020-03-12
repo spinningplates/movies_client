@@ -1,8 +1,8 @@
 export interface MovieElement{
     Title:string,
     Director:string,
-    Description:string,
+    Plot:string,
     Genre:string,
-    ImageLink:string,
+    Poster:string,
     Year:string,    
 }

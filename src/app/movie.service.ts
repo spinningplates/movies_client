@@ -20,4 +20,9 @@ export class MovieService {
   {
     return this.http.post(this.omdbUrl, searchValue);
   }
+
+  addMovie(movie)
+  {
+    return this.http.post(this.moviesUrl, movie);
+  }
 }
