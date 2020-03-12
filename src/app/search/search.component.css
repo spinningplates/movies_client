@@ -14,3 +14,7 @@
 .search-button {
     position: relative;
 }
+
+table {
+    width: 100%;
+}

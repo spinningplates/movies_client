@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MovieService } from '../movie.service';
+import { MovieElement } from '../interfaces/MovieElement';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-search',
@@ -9,6 +11,8 @@ import { MovieService } from '../movie.service';
 })
 export class SearchComponent {
 
+  displayedColumns: string[] = ['Title', 'Year']
+  searchResult = new MatTableDataSource<MovieElement>([] as MovieElement[]);
   constructor(private service:MovieService) { }
 
   searchForm = new FormGroup({
@@ -18,7 +22,7 @@ export class SearchComponent {
   onSubmit()
   {
     this.service.searchByTitle(this.searchForm.value).subscribe((data) => {
-      console.log(data);
+      this.searchResult = new MatTableDataSource<MovieElement>(data["Search"] as MovieElement[]);
     });
   }
 
