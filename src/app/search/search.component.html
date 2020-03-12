@@ -1,0 +1,11 @@
+<mat-card>
+    <span>Enter Movie Title</span>
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="search-field">
+            <mat-label>Movie Title</mat-label>
+            <input matInput placeholder="Ex. Star Wars" formControlName="titleSearch">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button class="search-button">Go</button>
+    </form>    
+</mat-card>

@@ -1,0 +1,16 @@
+.search-form {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20%;
+}
+
+.search-field {
+    width: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.search-button {
+    position: relative;
+}
