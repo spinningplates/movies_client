@@ -5,11 +5,11 @@
     margin-bottom: 20%;
 }
 
-.search-field {
-    width: 30%;
+/* .search-field {
+    width: 45%;
     margin-left: 20%;
     margin-right: 20%;
-}
+} */
 
 .search-button {
     position: relative;
@@ -17,4 +17,12 @@
 
 table {
     width: 100%;
+}
+
+mat-card {
+    margin: 5% 15% 5% 15%;
+}
+
+form {
+    margin: 0 10%;
 }

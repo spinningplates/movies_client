@@ -7,22 +7,36 @@ import { HttpClient } from '@angular/common/http';
 export class MovieService {
 
   moviesUrl: string = "https://localhost:5001/api/movies";
-  omdbUrl: string = "https://localhost:5001/api/omdb"
 
   constructor(private http: HttpClient) { }
 
   getAll()
   {
-    return this.http.get(this.moviesUrl);
+    return this.http.get(this.moviesUrl+'/getmovies');
   }
 
   searchByTitle(searchValue)
   {
-    return this.http.post(this.omdbUrl, searchValue);
+    return this.http.post(this.moviesUrl+'/searchbytitle', searchValue);
   }
 
   addMovie(movie)
   {
-    return this.http.post(this.moviesUrl, movie);
+    return this.http.post(this.moviesUrl+'/addmovie', movie);
+  }
+
+  updateMovie(id, movie)
+  {
+    return this.http.post(this.moviesUrl+'/updatemovie/'+id, movie);
+  }
+
+  getMovie(id)
+  {
+    return this.http.get(this.moviesUrl+'/getmovie/'+id);
+  }
+
+  deleteMovie(id)
+  {
+    return this.http.delete(this.moviesUrl+"/deletemovie/"+id);
   }
 }

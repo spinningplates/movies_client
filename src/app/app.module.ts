@@ -7,6 +7,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from  './search/search.component';
+import { MovieComponent } from './movie/movie.component';
 
 //services
 import { MovieService } from './movie.service';
@@ -24,7 +25,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
 //forms
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     SearchComponent,
+    MovieComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatSelectModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

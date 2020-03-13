@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { MovieService } from '../movie.service';
 import { MoviePreviewElement } from '../interfaces/MoviePreviewElement';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -13,7 +14,7 @@ export class SearchComponent {
 
   displayedColumns: string[] = ['Title', 'Year', 'Actions']
   searchResult = new MatTableDataSource<MoviePreviewElement>([] as MoviePreviewElement[]);
-  constructor(private service:MovieService) { }
+  constructor(private service:MovieService, private router:Router) { }
 
   searchForm = new FormGroup({
     titleSearch: new FormControl('')
@@ -29,7 +30,7 @@ export class SearchComponent {
   addMovie(movie)
   {
     this.service.addMovie(movie).subscribe((data) => {
-      console.log(data);
+      this.router.navigate(['/movies']);
     });
   }
 

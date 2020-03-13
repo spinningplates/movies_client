@@ -1,0 +1,33 @@
+<mat-card class="image">
+    <img [src]="image" />
+</mat-card>
+<mat-card class="movie-data">
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Ex. Star Wars" formControlName="title">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Director</mat-label>
+            <input matInput placeholder="Ex. Star Wars" formControlName="director">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Plot</mat-label>
+            <textarea matInput placeholder="Ex. Star Wars" formControlName="plot"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Genre</mat-label>
+            <input matInput placeholder="Action" formControlName="genre">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Year</mat-label>
+            <input matInput placeholder="1985" formControlName="year">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button class="search-button">Update</button>
+    </form>
+</mat-card>

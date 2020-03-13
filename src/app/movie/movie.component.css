@@ -1,0 +1,12 @@
+.image {
+    float: left;
+}
+
+.movie-data {
+    width: 50%;
+    float: left;
+}
+
+mat-form-field {
+    width: 100%;
+}
