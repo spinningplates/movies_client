@@ -1,3 +1,6 @@
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
 <table mat-table [dataSource]="dataSource" class="mat-elevationz8">
     <ng-container matColumnDef="Title">
         <th mat-header-cell *matHeaderCellDef> Title </th>
@@ -30,3 +33,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5,10,25,100]"></mat-paginator>

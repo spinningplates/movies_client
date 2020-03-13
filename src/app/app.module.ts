@@ -23,6 +23,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 //forms
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -49,6 +51,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatSelectModule,
     MatToolbarModule,
     MatIconModule,
+    MatSortModule,
+    MatPaginatorModule,
     FormsModule
   ],
   providers: [MovieService],
