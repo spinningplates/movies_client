@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from  './search/search.component';
 import { MovieComponent } from './movie/movie.component';
+import { CategoryComponent } from './category/category.component';
 
 //services
 import { MovieService } from './movie.service';
@@ -37,6 +38,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FooterComponent,
     SearchComponent,
     MovieComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

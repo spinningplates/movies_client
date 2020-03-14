@@ -27,12 +27,19 @@ export class MovieService {
 
   updateMovie(id, movie)
   {
+    console.log(movie);
     return this.http.post(this.moviesUrl+'/updatemovie/'+id, movie);
   }
 
   getMovie(id)
   {
     return this.http.get(this.moviesUrl+'/getmovie/'+id);
+  }
+
+  valueSearch(categorySearch)
+  {
+    console.log(categorySearch);
+    return this.http.post(this.moviesUrl+'/categorysearch', categorySearch);
   }
 
   deleteMovie(id)
