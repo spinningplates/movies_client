@@ -38,7 +38,6 @@ export class MovieService {
 
   valueSearch(categorySearch)
   {
-    console.log(categorySearch);
     return this.http.post(this.moviesUrl+'/categorysearch', categorySearch);
   }
 

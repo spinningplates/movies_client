@@ -44,4 +44,18 @@ export class MoviesComponent implements OnInit {
     });
   }
 
+  directors(element)
+  {
+    var directors;
+    directors = element.director.split(',');
+    return directors;
+  }
+
+  genres(element)
+  {
+    var genres;
+    genres = element.genre.split(',');
+    return genres;
+  }
+
 }

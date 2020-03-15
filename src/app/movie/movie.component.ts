@@ -36,7 +36,8 @@ export class MovieComponent implements OnInit {
         plot: [data.plot, Validators.required],
         genre: [data.genre, Validators.required],
         year: [data.year, Validators.required],
-        poster: [data.poster]
+        poster: [data.poster],
+        imdbId: [data.imdbId]
       });      
     });
   }
