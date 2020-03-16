@@ -27,7 +27,6 @@ export class MovieService {
 
   updateMovie(id, movie)
   {
-    console.log(movie);
     return this.http.post(this.moviesUrl+'/updatemovie/'+id, movie);
   }
 
